@@ -1,6 +1,6 @@
-k-fold cross-validation on a dataset using a neural network built with Keras. Here's a step-by-step breakdown of what it does:
+k-fold cross-validation on a dataset using a neural network built with Keras. Here's how it works:
 
-1. Data Loading and Preprocessing:
+### 1. Data Loading and Preprocessing:
 
 * It loads the data from an Excel file (cd73_data.xlsx) using pandas.
 * The dataset is divided into different types of data (e.g., Metadata, Geometric, Intensity, etc.).
@@ -8,7 +8,7 @@ k-fold cross-validation on a dataset using a neural network built with Keras. He
 * The table is converted into a NumPy array (T), and labels (t) are created with 1 for Class 1 (8492 samples) and 0 for Class 2 (8000 samples).
 * The explanatory variables (features) are selected, specifically Zernike Moments, which are assumed to be columns 19-48.
 
-2. K-Fold Cross-Validation:
+### 2. K-Fold Cross-Validation:
 
 * The dataset is divided into 10 folds using KFold from scikit-learn, which shuffles the data for each fold.
 This ensures that the model is trained on 9 folds and tested on the remaining fold in each iteration, shuffling the data to avoid bias.
